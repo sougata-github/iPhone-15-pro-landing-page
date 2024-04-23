@@ -1,15 +1,11 @@
 import { RefObject, Suspense } from "react";
 
 import * as THREE from "three";
-import {
-  Html,
-  OrbitControls,
-  PerspectiveCamera,
-  View,
-} from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 
 import IPhone from "./IPhone";
 import Lights from "./Lights";
+import Loader from "./Loader";
 import { modelType } from "./Model";
 
 import { cn } from "@/lib/utils";
@@ -37,10 +33,12 @@ const ModelView = ({
     <View
       index={index}
       id={gsapType}
-      className={cn("w-full h-full", index === 2 ? "right-[-100%]" : "")}
+      className={cn(
+        "w-full h-full absolute",
+        index === 2 ? "right-[-100%]" : ""
+      )}
     >
-      {/*Ambient Light */}
-      <ambientLight intensity={0.3} />
+      <ambientLight intensity={2} />
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
 
@@ -59,13 +57,7 @@ const ModelView = ({
         name={`${index === 1 ? "small" : "large"} `}
         position={[0, 0, 0]}
       >
-        <Suspense
-          fallback={
-            <Html>
-              <div>Loading...</div>
-            </Html>
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <IPhone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}

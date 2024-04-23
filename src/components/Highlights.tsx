@@ -13,7 +13,7 @@ const Highlights = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: "#title",
-        toggleActions: "restart none none none",
+        toggleActions: "restart restart none none",
       },
       duration: 1,
     });

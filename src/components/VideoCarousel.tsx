@@ -62,7 +62,7 @@ const VideoCarousel = () => {
     }
   }, [startPlay, videoId, isPlaying, loadedData]);
 
-  const handleLoadedMetadata = (i: number, e: any) => {
+  const handleLoadedMetadata = (_i: number, e: any) => {
     setLoadedData((prevVideo: any) => [...prevVideo, e]);
   };
 
@@ -116,11 +116,12 @@ const VideoCarousel = () => {
       }
 
       const animUpdate = () => {
-        anim.progress(
-          //@ts-ignore
-          videoRef.current[videoId].currentTime /
-            hightlightsSlides[videoId].videoDuration
-        );
+        const currentVideo = videoRef.current[videoId];
+        if (currentVideo) {
+          anim.progress(
+            currentVideo.currentTime / hightlightsSlides[videoId].videoDuration
+          );
+        }
       };
 
       if (isPlaying) {
@@ -188,7 +189,6 @@ const VideoCarousel = () => {
                   playsInline={true}
                   preload="auto"
                   muted
-                  //@ts-ignore
                   ref={(el) => (videoRef.current[i] = el)}
                   onEnded={() => {
                     i !== 3
@@ -227,13 +227,11 @@ const VideoCarousel = () => {
           {videoRef.current?.map((_, i) => (
             <span
               key={i}
-              //@ts-ignore
               ref={(el) => (videoDivRef.current[i] = el)}
               className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
             >
               <span
                 className="absolute h-full w-full rounded-full"
-                //@ts-ignore
                 ref={(el) => (videoSpanRef.current[i] = el)}
               />
             </span>
