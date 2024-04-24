@@ -83,9 +83,8 @@ const Model = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: "#heading",
-        toggleActions: "restart none none none",
+        toggleActions: "restart reverse restart reverse",
       },
-      duration: 1,
     });
   }, []);
 

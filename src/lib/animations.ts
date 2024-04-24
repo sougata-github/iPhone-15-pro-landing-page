@@ -1,7 +1,7 @@
 import { RefObject } from "react";
 import * as THREE from "three";
 
-interface animationProps {
+interface animateWithGsapTimelineProps {
   timeline: GSAPTimeline;
   rotationRef: RefObject<THREE.Group>;
   rotationState: number;
@@ -20,7 +20,7 @@ export const animateWithGsapTimeline = ({
   firstTarget,
   secondTarget,
   stylesObject,
-}: animationProps) => {
+}: animateWithGsapTimelineProps) => {
   timeline.to(rotationRef.current?.rotation!, {
     y: rotationState,
     duration: 1,

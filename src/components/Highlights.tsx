@@ -13,9 +13,8 @@ const Highlights = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: "#title",
-        toggleActions: "restart restart none none",
+        toggleActions: "restart reverse restart reverse",
       },
-      duration: 1,
     });
   }, []);
 
