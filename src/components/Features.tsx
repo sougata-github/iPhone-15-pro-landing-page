@@ -55,7 +55,7 @@ const Features = () => {
       duration: 1,
       scrollTrigger: {
         trigger: ".g_text",
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: "restart none none none",
         start: "top 85%",
       },
     });
