@@ -39,7 +39,8 @@ const Hero = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 2,
+        delay: 1,
+        duration: 1,
         ease: "power1.inOut",
       }
     );

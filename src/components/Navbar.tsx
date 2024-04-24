@@ -1,23 +1,8 @@
 import { navLists } from "@/constants";
 
 import MobileNav from "./MobileNav";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 const Navbar = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      "#navbar",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 2,
-      }
-    );
-  }, []);
-
   return (
     <header
       id="navbar"
