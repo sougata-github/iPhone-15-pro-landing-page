@@ -33,7 +33,7 @@ const HowItWorks = () => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: ".g_fadeIn",
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: "restart none none none",
         start: "top 85%",
       },
     });
