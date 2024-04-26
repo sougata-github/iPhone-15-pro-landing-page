@@ -16,7 +16,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="bg-neutral-700 my-5 h-[1px] w-full" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between">
+        <div className="flex flex-col lg:flex-row md:items-center justify-between">
           <p className="font-semibold text-gray text-sm">
             Copyright @ 2024 Apple Inc. All rights reserved.
           </p>
