@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# iPhone 15 Pro landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IPhone 15 Pro landing page built using React, GSAP and Three.js.
 
-Currently, two official plugins are available:
+## Preview of live site
+![Screenshot (134)](https://github.com/sougata-github/iPhone-15-pro-landing-page/assets/102734212/f81bb447-6a53-4f6c-a47e-9e4c7c5f13fd)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
 
-## Expanding the ESLint configuration
+- Stunning Hero section
+- Animated Video Carousel
+- Interactive 3D iPhone models
+- Seamless animations & transitions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP
+- Three.js
+- Sentry
+- Vite
+- Vercel
