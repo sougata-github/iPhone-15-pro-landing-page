@@ -28,7 +28,7 @@ const Footer = () => {
               >
                 {link}{" "}
                 {i !== footerLinks.length - 1 && (
-                  <span className="hidden sm:inline-block mx-2">|</span>
+                  <span className="hidden lg:inline-block mx-2">|</span>
                 )}
               </p>
             ))}
